@@ -1,0 +1,15 @@
+{% extends "admin/base_site.html" %}
+{% load static i18n %}
+
+{# Setup browser tab label #}
+{% block title %}{{ title }} |  {% trans "Gestion Comedores Escolares" %}{% endblock %}
+
+{# Setup branding #}
+{% block branding %}
+    <h1 id="site-name">
+        <a href="{% url 'admin:index' %}">
+            {# Your logo here #}
+            <!--<img style="background-color: white" src= "{% static "img/" %}" alt="Deposito Roca" height="50%" width="50%">-->
+        </a>
+    </h1>
+{% endblock %}

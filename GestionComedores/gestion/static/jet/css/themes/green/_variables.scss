@@ -1,0 +1,198 @@
+/*
+ * Customizable variables
+ * Update these variable to create theme
+ */
+
+/*
+ * General
+ */
+
+$background-color: #419BAE;
+$text-color: #000000;
+$dim-text-color: #000000;
+$error-text-color: #c14747;
+
+$link-color: #000000;
+$hover-link-color: #419BAE;
+
+$font: Arial, sans-serif;
+$font-size: 14px;
+
+/*
+ * Sidebar
+ */
+
+$sidebar-width: 250px;
+
+$sidebar-background-color: #4a4a4a;
+$sidebar-contrast-background-color: #000000;
+$sidebar-contrast-text-color: #fffffe;
+
+$sidebar-arrow-color: #419BAE;
+$sidebar-hover-arrow-color: #fffffe;
+
+$sidebar-action-color: #419BAE;
+$sidebar-hover-action-color: #7FB1DC;
+
+$sidebar-title-action-color: #44b78b;
+$sidebar-hover-title-action-item-color: #7FB1DC;
+
+$sidebar-text-color: #419BAE;
+$sidebar-icon-color: #419BAE;
+$sidebar-link-color: #fffffe;
+$sidebar-hover-link-color: #fff;
+$sidebar-hover-background-color: #4DB2C7;
+
+$sidebar-popup-search-input-background-color: #000000;
+$sidebar-popup-search-input-text-color: #000000;
+$sidebar-popup-search-input-placeholder-color: transparentize(#4DB2C7, 0.5);
+
+$sidebar-popup-background-color: #eff6f5;
+$sidebar-popup-text-color: #fffffe;
+$sidebar-popup-overlay-color: #000;
+
+$sidebar-popup-link-text-color: #000000;
+$sidebar-popup-hover-link-color: #fff;
+$sidebar-popup-hover-link-background-color: #7FB1DC;
+
+/*
+ * Top
+ */
+
+$top-height: 32px;
+
+$top-text-color: #000000;
+$top-separator-color: #000000;
+$top-link-color: #000000;
+$top-hover-link-color: #4a4a4a;
+$top-border-color: #000000;
+$top-icon-color: #000000;
+
+$top-dropdown-background-color: #4a4a4a;
+$top-dropdown-text-color: #eff6f5;
+$top-dropdown-contrast-background-color: #4a4a4a;
+$top-dropdown-contrast-text-color: #bbddd9;
+$top-dropdown-border-color: #000000;
+$top-dropdown-link-color: #eff6f5;
+$top-dropdown-hover-link-color: #eff6f5;
+$top-dropdown-icon-color: #eff6f5;
+$top-dropdown-selected-color: #e5e2a5;
+
+/*
+ * Content
+ */
+
+$content-background-color: #fff;
+$content-contrast-background-color: #f5fdfa; //inline list bg
+$content-contrast2-background-color: #4a4a4a; //table header
+$content-contrast3-background-color: #4a4a4a; //delete collapsable
+$content-selected-background-color: #fffcc0;
+$content-contrast2-text-color: #fff;
+$content-border-color: #f5f3f4; //row bottom
+$content-border2-color: #4a4a4a; //table bottom
+$content-selected-border-color: #e5e2a5;
+
+$tab-selected-border-color: #000000;
+$tab-error-border-color: #c14747;
+
+/*
+ * Buttons
+ */
+
+$button-background-color: #4a4a4a;
+$button-hover-background-color: #888579;
+$button-active-background-color: #4a4a4a;
+$button-text-color: #fffffe;
+$button-hover-text-color: #fff;
+$button-active-text-color: #fff;
+
+$primary-button-background-color: #4a4a4a;
+$primary-button-text-color: #fff;
+
+$danger-button-background-color: #c14747;
+$danger-button-text-color: #fff;
+
+$background-button-background-color: #fff;
+$background-button-text-color: #000000;
+
+/*
+ * Inputs
+ */
+
+$input-background-color: #fff;
+$input-contrast-background-color: #000000;
+$input-border-color: #656565;
+$input-hover-background-color: #7FB1DC;
+$input-icon-color: #000000;
+$input-text-color: #000000;
+$input-contrast-text-color: #4DB2C7;
+$input-hover-text-color: #fff;
+$input-selected-text-color: #000000;
+$input-disabled-text-color: #000000;
+$input-placeholder-color: #000000;
+$input-shadow-color: transparentize(#4a4a4a, 0.25);
+
+$background-input-background-color: #fff;
+$background-input-border-color: #fff;
+$background-input-text-color: #000000;
+
+/*
+ * Messages
+ */
+
+$warning-color: #f0dada;
+$warning-text-color: #a30007;
+$info-color: #e8e8bd;
+$info-text-color: #bebe92;
+$success-color: #e0eec5;
+$success-text-color: #009711;
+
+/*
+ * Login
+ */
+
+$login-background-color: #4DB2C7;
+$login-title-text-color: #000000;
+$login-title-contrast-text-color: #fff;
+$login-header-background-color: #3c706b;
+$login-header-text-color: #fff;
+$login-content-background-color: #fff;
+
+/*
+ * jQuery UI
+ */
+
+$jquery-ui-buttonpane-background: #eff6f5;
+
+$jquery-ui-state-default-background-color: #fff;
+$jquery-ui-state-default-border-color: #eff6f5;
+$jquery-ui-state-default-text-color: #000000;
+
+$jquery-ui-state-hover-background-color: #7FB1DC;
+$jquery-ui-state-hover-border-color: #7FB1DC;
+$jquery-ui-state-hover-text-color: #fff;
+
+$jquery-ui-state-active-background-color: #44b78b;
+$jquery-ui-state-active-border-color: #44b78b;
+$jquery-ui-state-active-text-color: #fff;
+
+$jquery-ui-state-highlight-background-color: #fff;
+$jquery-ui-state-highlight-border-color: #7FB1DC;
+$jquery-ui-state-highlight-text-color: #7FB1DC;
+
+$jquery-ui-overlay-color: #000;
+
+$jquery-ui-tooltip-background-color: #000;
+$jquery-ui-tooltip-text-color: #fff;
+
+/*
+ * Charts
+ */
+
+$chart-fillColor: transparentize($hover-link-color, 0.75);
+$chart-strokeColor: $hover-link-color;
+$chart-pointColor: $content-contrast2-text-color;
+$chart-pointHighlightFill: $hover-link-color;
+$chart-scaleGridLineColor: transparentize(#000, 0.9);
+$chart-scaleLineColor: transparentize(#000, 0.9);
+$chart-scaleFontColor: $content-contrast2-text-color;

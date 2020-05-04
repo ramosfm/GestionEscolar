@@ -1,0 +1,43 @@
+.no-marg{
+    margin-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.box{
+    box-sizing: content-box;
+    border: solid #000000 1px;
+}
+
+#content{
+     background-color: #ebeded;
+}
+
+.textp{
+    font-weight: bolder;
+    padding-right: 0px !important;
+}
+.rowIndex {
+    height: 37px;
+}
+.rowsScroll{
+    width: 100%;
+    overflow-x: auto;
+}
+.layoutPostion{
+    max-width: 60px;
+}
+.colMax{
+    max-width: 50px;
+}
+.customModal{
+    max-width: 800px !important;
+}
+.break-word {
+    word-wrap: break-word;
+}
+.th{
+    text-align: center;
+}
+.td{
+    text-align: center;
+}

@@ -1,0 +1,19 @@
+.idea/
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+db.sqlite3
+*.sqlite3
+.idea
+
+local_settings.py
+
+
+# pyenv
+.python-version
+
+# celery beat schedule file
+celerybeat-schedule
+
