@@ -27,6 +27,8 @@ class SolicitanteAdmin(admin.ModelAdmin):
     def get_fieldsets(self, request, obj=None):
         if request.user.groups.filter(name='Escuela').exists():
             return self.escuela_fieldsets
+        elif request.user.groups.filter(name='Distrito').exists():
+            return self.admin_fieldsets
         elif request.user.groups.filter(name='Admin').exists():
             return self.admin_fieldsets
         return None
@@ -84,6 +86,8 @@ class SolicitanteAdmin(admin.ModelAdmin):
             solicitante = Solicitante.objects.filter(escuela__usuario__username=request.user.username)
         elif request.user.groups.filter(name='Admin').exists():
             solicitante = Solicitante.objects.all()
+        elif request.user.groups.filter(name='Distrito').exists():
+            solicitante = Solicitante.objects.filter(escuela__distrito__usuario__username=request.user.username)
         else:
             solicitante = None
         return solicitante
@@ -107,3 +111,19 @@ class EscuelaAdmin(admin.ModelAdmin):
 @admin.register(Necesidad)
 class DistritoAdmin(admin.ModelAdmin):
     list_display = ['descripcion']
+
+
+@admin.register(NecesidadSolicitante)
+class NecesidadSolicitanteAdmin(admin.ModelAdmin):
+    list_display = ['solicitante', 'necesidad', 'cubierta', 'fecha_solicitud', 'fecha_cobertura', 'escuela']
+    list_display_links = None
+    list_select_related = ['solicitante', 'solicitante__escuela']
+    list_filter = ['cubierta', 'necesidad', 'fecha_solicitud', 'solicitante__escuela']
+
+    def escuela(self, obj):
+        return obj.solicitante.escuela
+
+    def has_add_permission(self, request):
+        return False
+
+

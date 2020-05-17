@@ -6,6 +6,6 @@ from django.urls import path, include
 from gestion import views
 
 urlpatterns = [
-url(r"^grafico_solicitudes/$", views.grafico_solicitudes, name='grafico_solicitudes'),
-
+    url(r"^grafico_solicitudes/$", views.grafico_solicitudes, name='grafico_solicitudes'),
+    url(r"^cargar_escuelas/$", views.cargar_escuelas, name='cargar_escuelas'),
 ]

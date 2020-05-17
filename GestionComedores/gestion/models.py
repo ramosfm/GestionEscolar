@@ -4,6 +4,7 @@ import datetime
 
 
 class Distrito(models.Model):
+    usuario = models.ForeignKey(User, on_delete=models.CASCADE, related_name='usuario_distrito')
     nombre = models.CharField(max_length=100)
     numero = models.IntegerField()
 
@@ -11,17 +12,25 @@ class Distrito(models.Model):
         return self.nombre
 
     class Meta:
-        verbose_name = "Sección"
-        verbose_name_plural = "Secciones"
+        verbose_name = "Distrito"
+        verbose_name_plural = "Distritos"
+
+
+class Ambito(models.TextChoices):
+    URBANO = 'Urbano', 'Urbano'
+    RURAL = 'Rural', 'Rural'
 
 
 class Escuela(models.Model):
     usuario = models.ForeignKey(User, on_delete=models.CASCADE, related_name='usuario')
-    distrito = models.ForeignKey(Distrito, on_delete=models.CASCADE, related_name='secciones')
+    distrito = models.ForeignKey(Distrito, on_delete=models.CASCADE, related_name='distrito')
+    cue = models.CharField(max_length=100)
     nombre = models.CharField(max_length=100)
     direccion = models.CharField(max_length=100)
     barrio = models.CharField(max_length=100, blank=True)
+    ambito = models.CharField(max_length=32, choices=Ambito.choices, default=Ambito.URBANO,)
     ciudad = models.CharField(max_length=100, blank=True)
+    telefono = models.CharField(max_length=100, blank=True)
     numero = models.CharField(max_length=10, help_text='Número de escuela', null=True, blank=True)
     latitud = models.FloatField(null=True, editable=False)
     longitud = models.FloatField(null=True, editable=False)
@@ -70,6 +79,7 @@ class Solicitante(models.Model):
         max_length=20,
         choices=Sexo.choices,
         default=Sexo.MASCULINO,
+        verbose_name="Genero"
     )
     grado = models.CharField(max_length=20)
     direccion = models.CharField(max_length=100)
@@ -106,6 +116,10 @@ class Necesidad(models.Model):
     def __str__(self):
         return self.descripcion
 
+    class Meta:
+        verbose_name = "Opcion Necesidad"
+        verbose_name_plural = "Opcion Necesidades"
+
 
 class NecesidadSolicitante(models.Model):
     solicitante = models.ForeignKey(Solicitante, on_delete=models.CASCADE, related_name='sol_necesidad')
@@ -116,3 +130,7 @@ class NecesidadSolicitante(models.Model):
 
     def __str__(self):
         return self.necesidad.descripcion
+
+    class Meta:
+        verbose_name = "Necesidad"
+        verbose_name_plural = "Necesidades"
