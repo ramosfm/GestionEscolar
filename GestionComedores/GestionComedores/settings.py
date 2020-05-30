@@ -146,10 +146,10 @@ JET_SIDE_MENU_ITEMS = [
     {
         'label': 'Gestion',
         'items': [
-            {'name': 'gestion.escuela', 'label': 'Escuela', 'permissions': ['Admin']},
+            {'name': 'gestion.escuela', 'label': 'Escuela', 'permissions': ['Admin','Distrito']},
             {'name': 'gestion.solicitante', 'label': 'Solicitante'},
             {'name': 'gestion.distrito', 'label': 'Distrito', 'permissions': ['Admin']},
-            {'name': 'gestion.necesidad', 'label': 'Opcion Necesidad', 'permissions': ['Admin']},
+            {'name': 'gestion.necesidad', 'label': 'Opcion Necesidad', 'permissions': ['Admin', 'Distrito']},
             {'name': 'gestion.necesidadsolicitante', 'label': 'Necesidades',},
         ]
     },

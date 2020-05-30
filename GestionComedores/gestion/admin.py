@@ -18,7 +18,7 @@ class NecesidadSolicitanteAdminInline(admin.TabularInline):
 @admin.register(Solicitante)
 class SolicitanteAdmin(admin.ModelAdmin):
     list_display = ['apellido', 'nombre', 'numero_documento', 'escuela']
-    #list_filter = ['escuela']
+    list_filter = ['escuela']
     search_fields = ['numero_documento']
     inlines = [
         NecesidadSolicitanteAdminInline,
