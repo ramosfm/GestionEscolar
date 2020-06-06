@@ -25,7 +25,7 @@ class SolicitanteAdmin(admin.ModelAdmin):
 
     def get_list_filter(self, request):
         if request.user.groups.filter(name='Escuela').exists():
-            return ['']
+            return []
         else:
             return ['escuela', ]
 
