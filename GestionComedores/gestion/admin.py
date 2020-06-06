@@ -18,11 +18,16 @@ class NecesidadSolicitanteAdminInline(admin.TabularInline):
 @admin.register(Solicitante)
 class SolicitanteAdmin(admin.ModelAdmin):
     list_display = ['apellido', 'nombre', 'numero_documento', 'escuela']
-    list_filter = ['escuela']
     search_fields = ['numero_documento']
     inlines = [
         NecesidadSolicitanteAdminInline,
     ]
+
+    def get_list_filter(self, request):
+        if request.user.groups.filter(name='Escuela').exists():
+            return ['']
+        else:
+            return ['escuela', ]
 
     def get_fieldsets(self, request, obj=None):
         if request.user.groups.filter(name='Escuela').exists():
